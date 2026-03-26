@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>午夜圖書館 — 互動恐怖故事</title>
+  <meta name="description" content="一個發生在深夜校園圖書館的互動恐怖驚悚故事，你的每一個選擇都將決定命運的走向。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <div id="app">
+    <!-- 標題畫面 -->
+    <div id="title-screen" class="screen active">
+      <div class="card title-card">
+        <div class="ghost-icon">👻</div>
+        <h1>午夜圖書館</h1>
+        <p class="subtitle">一個不該被打開的故事</p>
+        <div class="divider"></div>
+        <p class="intro-text">
+          期末考前夕，你獨自留在學校圖書館溫書。<br>
+          時鐘指向午夜十二點，燈光開始忽明忽暗……<br>
+          你聽見了不該存在的聲音。
+        </p>
+        <p class="intro-hint">你的每一個選擇，都將改變故事的結局。</p>
+        <button id="start-btn" class="btn btn-primary" onclick="startGame()">
+          <span>開始探險</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 故事畫面 -->
+    <div id="story-screen" class="screen">
+      <div class="card story-card">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="story-header">
+          <span id="chapter-label" class="chapter-label">第一章</span>
+        </div>
+        <div id="story-text" class="story-text"></div>
+        <div class="divider"></div>
+        <div id="choices-container" class="choices-container"></div>
+      </div>
+    </div>
+
+    <!-- 結局畫面 -->
+    <div id="ending-screen" class="screen">
+      <div class="card ending-card">
+        <div id="ending-icon" class="ending-icon"></div>
+        <h2 id="ending-title" class="ending-title"></h2>
+        <div class="divider"></div>
+        <p id="ending-text" class="ending-text"></p>
+        <div id="ending-stats" class="ending-stats"></div>
+        <button class="btn btn-primary" onclick="restartGame()">
+          <span>重新開始故事</span>
+          <span class="btn-arrow">↺</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
