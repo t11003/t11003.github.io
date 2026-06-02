@@ -1,0 +1,14 @@
+{
+  "name": "horizon-personal-brand-website",
+  "version": "1.0.0",
+  "description": "張子軒 Horizon Chang 個人形象網站",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

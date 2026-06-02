@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>陳志勝 | Chih-Sheng Chen - AI 協同工程與博弈決策演算法專家 | 個人形象官網</title>
+  <meta name="description" content="陳志勝 (Chih-Sheng Chen) 的個人形象網站。逢甲大學資訊工程碩士，專注於 AI 提示工程、人機協作系統開發及博弈演算法決策。提供極致流暢的和風極簡數位體驗。">
+  <meta name="keywords" content="陳志勝, 逢甲大學資工, 叫AI寫程式, 打麻將, AI協同開發, Prompt工程師, 博弈演算法, 決策科學">
+  <meta name="author" content="陳志勝 Chih-Sheng Chen">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="陳志勝 | Chih-Sheng Chen - AI 協同工程與博弈決策演算法專家">
+  <meta property="og:description" content="專注於 AI 提示工程、人機協作系統開發及博弈演算法決策。畢業於逢甲大學資訊工程研究所。">
+  <meta property="og:image" content="assets/profile.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="陳志勝 | Chih-Sheng Chen - AI 協同工程與博弈決策演算法專家">
+  <meta property="twitter:description" content="專注於 AI 提示工程、人機協作系統開發及博弈演算法決策。">
+  <meta property="twitter:image" content="assets/profile.jpg">
+
+  <!-- Favicon Reference -->
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+
+  <!-- Core CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Dynamic Ambient Glowing Blobs -->
+  <div class="bg-ambient">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Interactive Connecting Canvas Particles (Moss celadon style) -->
+  <canvas id="canvas-particles"></canvas>
+
+  <!-- --- NAVIGATION BAR --- -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="logo" id="nav-logo">
+        CHIH-SHENG<span class="logo-dot"></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active" id="link-home">首頁</a></li>
+        <li><a href="#about" class="nav-link" id="link-about">關於我</a></li>
+        <li><a href="#services" class="nav-link" id="link-services">專業領域</a></li>
+        <li><a href="#portfolio" class="nav-link" id="link-portfolio">決策專案</a></li>
+        <li><a href="#experience" class="nav-link" id="link-experience">學研歷程</a></li>
+        <li><a href="#contact" class="nav-link" id="link-contact">聯絡我</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Switching Trigger -->
+        <button class="theme-toggle-btn" aria-label="切換深淺色主題" id="btn-theme-toggle">
+          <svg class="theme-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile hamburger menu toggle -->
+        <button class="mobile-nav-toggle" aria-label="開啟選單" id="btn-mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Top-attached scroll progress tracking bar -->
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scroll-bar"></div>
+    </div>
+  </nav>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-left">
+        <!-- Live Status Pulsing Badge -->
+        <div class="hero-badge" id="hero-status">
+          <span class="hero-badge-pulse"></span>
+          <span>AI 代理人協調中 · 牌局決策就緒</span>
+        </div>
+        
+        <h1 class="hero-title">
+          駕馭人工智慧，<br>
+          <span class="text-gradient">實踐博弈決策科學</span>
+        </h1>
+        
+        <p class="hero-description">
+          我是陳志勝。畢業於逢甲大學資訊工程碩士，專注於利用尖端 AI 技術協作研發高價值系統，並將資工演算法思維融會於博弈決策（麻將）中，在不確定性的複雜局勢下尋求全局最優決策路徑。
+        </p>
+        
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn btn-primary" id="btn-hero-portfolio">
+            <span>瀏覽決策作品 Portfolio</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
+            <span>聯絡我 Let's Talk</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Portrait Visuals Frame -->
+      <div class="hero-visual reveal-right">
+        <div class="hero-visual-bg"></div>
+        <div class="hero-visual-frame">
+          <img src="assets/profile.jpg" alt="陳志勝 個人肖像大頭貼" id="img-profile">
+        </div>
+
+        <!-- Floating UI components overlaying profile visual -->
+        <div class="floating-ui-card c1">
+          <div class="floating-icon-wrapper">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="floating-card-info">
+            <span class="floating-card-title">AI Prompt Orchestrator</span>
+            <span class="floating-card-subtitle">10x Speed Development</span>
+          </div>
+        </div>
+
+        <div class="floating-ui-card c2">
+          <div class="floating-icon-wrapper" style="background-color: var(--secondary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+            </svg>
+          </div>
+          <div class="floating-card-info">
+            <span class="floating-card-title">Decision Game Theory</span>
+            <span class="floating-card-subtitle">Mahjong Probability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Interactive Socials Panel on left screen margin -->
+    <div class="hero-socials">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Scroll down indicator on right screen margin -->
+    <div class="scroll-indicator">
+      <span>向下滾動 Scroll Down</span>
+      <div class="scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- --- ABOUT SECTION --- -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">ABOUT ME</span>
+        <h2 class="section-title">關於陳志勝</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Biography Metrics (Stats Card) -->
+        <div class="about-content-left reveal-left">
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number text-gradient" id="stat-projects">100k+</div>
+              <div class="stat-label">AI 協同代碼行數</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number text-gradient" id="stat-clients">168+</div>
+              <div class="stat-label">博弈局勢戰略決策</div>
+            </div>
+            <div class="stat-card" style="grid-column: span 2;">
+              <div class="stat-number text-gradient" id="stat-experience" style="font-size: 2.25rem;">逢甲資工 雙學位</div>
+              <div class="stat-label">資訊工程學系 學士 & 碩士</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biography text and dynamic skills indicators -->
+        <div class="about-content-right reveal-right">
+          <p class="about-highlight">
+            「重複累人的寫程式交給人工智慧，人類的大腦應用於更完美的和牌美學與策略決策。」
+          </p>
+          <p class="about-text">
+            我是陳志勝，求學於逢甲大學資訊工程學系，並取得了資工學士與碩士雙學位。在奠定了堅實的數據結構與網絡協議理論基礎後，我投身於最前沿的「AI 協同開發」與「博弈決策科學」研究。
+            我深信軟體工程的未來在於精確的人機對話，因此擅長叫 AI 寫出穩定、高品質的代碼；同時，我將博弈論、決策矩陣與動態規劃運用於中華傳統的麻將局中，在看似隨機的牌流中尋求概率的最優解與完美的和牌防守線。
+          </p>
+
+          <!-- Skills Matrix Container with animatable progress bars -->
+          <div class="skills-container reveal">
+            <h3 class="skills-title">核心專長技能</h3>
+            <div class="skills-grid">
+              
+              <!-- Skill card 1 -->
+              <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">AI 協同開發與 Prompt 提示工程</span>
+                    <span class="skill-percent">98%</span>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar" data-percent="98"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill card 2 -->
+              <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"></polygon>
+                    <line x1="12" y1="22" x2="12" y2="12.5"></line>
+                    <line x1="22" y1="8.5" x2="12" y2="12.5"></line>
+                    <line x1="2" y1="8.5" x2="12" y2="12.5"></line>
+                    <line x1="12" y1="2" x2="12" y2="12.5"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">博弈決策演算法與牌局分析</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar" data-percent="95"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill card 3 -->
+              <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">系統架構與自動化代碼管線</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar" data-percent="88"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill card 4 -->
+              <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">概率決策模型與博弈心理學</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar" data-percent="92"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SERVICES SECTION --- -->
+  <section class="section" id="services" style="background-color: rgba(120, 154, 136, 0.03);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">MY SKILLS</span>
+        <h2 class="section-title">專業服務領域</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card reveal-scale delay-100">
+          <div class="service-icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">AI 協同軟體工程</h3>
+          <p class="service-description">
+            打破傳統逐行編碼的手法，善用前沿 LLM 與多代理人系統，以 10 倍速率迅速建構並部署高質量的全棧式應用與雲端架構。
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>10x 高效能全網響應式切版與開發</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>AI 自動化編碼管線與品質調控</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>快速軟體原型 (MVP) 設計與極速交付</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card reveal-scale delay-200">
+          <div class="service-icon-container" style="color: var(--secondary); background: rgba(76, 100, 115, 0.05);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">演算法決策顧問</h3>
+          <p class="service-description">
+            結合資工系的演算法思維與博弈理論（Game Theory），對複雜的多變局勢（如麻將牌局或商業談判）提供精準的量化模型諮詢。
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>牌局聽牌路徑與剩餘張數概率精算</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>對手心理博弈與極致安全牌防守策略</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>不確定性局勢下的全局最優決策求解</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card reveal-scale delay-300">
+          <div class="service-icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">提示詞工程優化</h3>
+          <p class="service-description">
+            為個人或企業量身定制高效、高精準度的提示詞架構，解決大語言模型幻覺問題，打造能獨立完成任務的 AI 代理人工作流。
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>企業自動化 Prompt 工作流管線設計</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Few-shot / CoT 深度推理提示詞優化</span>
+            </li>
+            <li class="service-feature-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>人機協同極速開發的最後一哩路</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- PORTFOLIO SECTION --- -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">MY PORTFOLIO</span>
+        <h2 class="section-title">精選專案作品</h2>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <ul class="portfolio-filters reveal">
+        <li><button class="filter-btn active" data-filter="all" id="btn-filter-all">全部專案</button></li>
+        <li><button class="filter-btn" data-filter="網頁開發" id="btn-filter-web">網頁開發</button></li>
+        <li><button class="filter-btn" data-filter="行動應用" id="btn-filter-app">行動應用</button></li>
+        <li><button class="filter-btn" data-filter="品牌識別" id="btn-filter-brand">品牌識別</button></li>
+      </ul>
+
+      <!-- Portfolio Grid Items -->
+      <div class="portfolio-grid">
+        
+        <!-- Project Card 1 -->
+        <div class="portfolio-item reveal-scale delay-100" data-category="網頁開發" data-id="1" id="project-card-1">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/portfolio-1.png" alt="智能 AI 協同開發代理人平台 Mockup">
+            <div class="portfolio-overlay">
+              <div class="portfolio-meta">
+                <span class="portfolio-category">網頁開發</span>
+                <h3 class="portfolio-title">智能 AI 協同開發代理人</h3>
+                <span class="portfolio-action-link">
+                  <span>查看專案細節</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="portfolio-item reveal-scale delay-200" data-category="行動應用" data-id="2" id="project-card-2">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/portfolio-2.png" alt="麻將牌局流向與概率決策分析儀表板 Mockup">
+            <div class="portfolio-overlay">
+              <div class="portfolio-meta">
+                <span class="portfolio-category">行動應用</span>
+                <h3 class="portfolio-title">麻將牌流概率與博弈分析系統</h3>
+                <span class="portfolio-action-link">
+                  <span>查看專案細節</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="portfolio-item reveal-scale delay-300" data-category="品牌識別" data-id="3" id="project-card-3">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/portfolio-3.png" alt="逢甲資工碩士論文學術識別與包裝 Mockup">
+            <div class="portfolio-overlay">
+              <div class="portfolio-meta">
+                <span class="portfolio-category">品牌識別</span>
+                <h3 class="portfolio-title">演算法與強化學習論文學術識別</h3>
+                <span class="portfolio-action-link">
+                  <span>查看專案細節</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- EXPERIENCE TIMELINE SECTION --- -->
+  <section class="section" id="experience" style="background-color: rgba(120, 154, 136, 0.03);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">MY EDUCATION</span>
+        <h2 class="section-title">學研歷程與經歷</h2>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item left reveal-left delay-100" id="timeline-1">
+          <div class="timeline-badge">2025 年 6 月 - 至今</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">獨立 AI 協作開發專家 & 博弈決策顧問</h3>
+            <p class="timeline-subtitle">人機協作實驗室 (Human-AI Collaborative Lab)</p>
+            <p class="timeline-desc">
+              運用 Claude、GPT 系列模型及自主研發的 Prompt 推理管線，為多家新創客戶提供超高速全端網頁原型設計與自動化代碼管線建構，並開發麻將博弈概率預測模型。
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item right reveal-right delay-200" id="timeline-2">
+          <div class="timeline-badge">2022 年 9 月 - 2024 年 6 月</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">逢甲大學 資訊工程學系 碩士</h3>
+            <p class="timeline-subtitle">逢甲大學研究所 (Feng Chia University - CS Master)</p>
+            <p class="timeline-desc">
+              主修決策演算法、強化學習與大數據分析。於碩士期間發表了基於不確定局勢下演算法決策理論的相關研究，成功將嚴謹的資工思維引入多人博弈環境。
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item left reveal-left delay-300" id="timeline-3">
+          <div class="timeline-badge">2018 年 9 月 - 2022 年 6 月</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">逢甲大學 資訊工程學系 學士</h3>
+            <p class="timeline-subtitle">逢甲大學資訊電機學院 (Feng Chia University - CS Bachelor)</p>
+            <p class="timeline-desc">
+              修習基礎數據結構、演算法分析、操作系統與網絡協議。在學期間完成了多個自動化編譯與高併發運算專案，奠定紮實的計算機工程實踐基礎。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CONTACT SECTION --- -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">GET IN TOUCH</span>
+        <h2 class="section-title">與我展開決策合作</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact details panel -->
+        <div class="contact-info-panel reveal-left">
+          
+          <div class="contact-method-card" id="contact-method-email">
+            <div class="contact-method-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-method-detail">
+              <h4>電子郵件 Email</h4>
+              <p>chihsheng.fcu@example.com</p>
+              <a href="mailto:chihsheng.fcu@example.com" class="contact-method-action" id="lnk-email-action">
+                <span>點此發送郵件 Send Mail</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method-card" id="contact-method-phone">
+            <div class="contact-method-icon" style="color: var(--secondary); background: rgba(76, 100, 115, 0.05);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-method-detail">
+              <h4>聯絡電話 Phone</h4>
+              <p>+886 988 168 888</p>
+              <a href="tel:+886988168888" class="contact-method-action" style="color: var(--secondary);" id="lnk-phone-action">
+                <span>點此撥打電話 Call Me</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method-card" id="contact-method-location">
+            <div class="contact-method-icon" style="color: var(--primary); background: rgba(120, 154, 136, 0.05);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-method-detail">
+              <h4>服務地點 Location</h4>
+              <p>逢甲大學週邊 / 台灣台中 / 支援全球雲端協作</p>
+              <span class="contact-method-action">
+                <span>Remote / Taichung, Taiwan</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Interactive Form panel -->
+        <div class="contact-form-panel reveal-right">
+          <form id="contact-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-name" class="form-label">您的姓名 Name *</label>
+                <div class="form-control-wrapper">
+                  <input type="text" id="form-name" class="form-control" placeholder="輸入您的稱呼..." required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-email" class="form-label">您的電子郵件 Email *</label>
+                <div class="form-control-wrapper">
+                  <input type="email" id="form-email" class="form-control" placeholder="輸入聯絡電子信箱..." required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">合作主題 Subject</label>
+              <div class="form-control-wrapper">
+                <input type="text" id="form-subject" class="form-control" placeholder="輸入主旨（如：AI 程式外包、牌局演算法顧問）...">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">詳細說明 Message *</label>
+              <div class="form-control-wrapper">
+                <textarea id="form-message" class="form-control" placeholder="請在此說明您的合作設想、時程預算等..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn" id="btn-submit-contact">
+              <span>發送決策邀請 Send Invitation</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="footer-logo">
+        CHIH-SHENG<span class="logo-dot"></span>
+      </a>
+      <div class="footer-copyright" id="footer-text">
+        &copy; 2026 陳志勝 Chih-Sheng Chen. All Rights Reserved. Co-designed with AI ❤️
+      </div>
+      <div class="footer-socials">
+        <!-- Reusable social links in footer -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" style="width: 36px; height: 36px;" aria-label="GitHub Footer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" style="width: 36px; height: 36px;" aria-label="LinkedIn Footer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- PORTFOLIO DETAIL INTERACTIVE MODAL --- -->
+  <div class="modal" id="portfolio-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="關閉視窗" id="btn-close-modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="modal-img-container">
+        <img src="" alt="專案精選大圖" id="img-modal-portfolio">
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-category" id="lbl-modal-category">網頁開發</span>
+          <h2 class="modal-title" id="lbl-modal-title">專案標題</h2>
+        </div>
+
+        <div class="modal-tags" id="lst-modal-tags">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-body-left">
+            <h3>專案概述 Overview</h3>
+            <p id="lbl-modal-desc">
+              這是一段專案的詳細文字概述。
+            </p>
+          </div>
+          
+          <div class="modal-body-right">
+            <div class="info-item">
+              <span class="info-label">客戶 Client</span>
+              <span class="info-val info-client" id="lbl-modal-client">客戶公司名稱</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">完成日期 Date</span>
+              <span class="info-val info-date" id="lbl-modal-date">2026 年 2 月</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">專案連結 Link</span>
+              <span class="info-val info-link" id="lbl-modal-link">
+                <!-- Dynamic Link -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button trigger -->
+  <a href="#home" class="back-to-top" aria-label="返回最上方" id="btn-back-to-top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </a>
+
+  <!-- Success Form Submission Toast Alert -->
+  <div class="contact-toast" id="toast-success">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>邀請發送成功！志勝會儘快於牌局空檔與您聯絡。</span>
+  </div>
+
+  <!-- Script Loader -->
+  <script src="js/script.js"></script>
+</body>
+</html>
